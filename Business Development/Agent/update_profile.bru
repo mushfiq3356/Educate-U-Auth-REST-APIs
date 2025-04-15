@@ -1,0 +1,37 @@
+meta {
+  name: update_profile
+  type: http
+  seq: 2
+}
+
+patch {
+  url: {{baseUrl}}/business-development-management/4aa1e4ab-4b82-45bb-ae39-5f1e27e9c873
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxYTE4NmExNi00ZTUzLTQzYmQtODY3OC1mMmU4NjI0N2IyNzYiLCJ1c2VyUG9ydGFsQ2F0ZWdvcnlJZCI6IjQ2ZGNkZjQ4LTcyMjAtNDkxMy04YTQ3LWM2ZDZjY2YwYWIwNyIsImlhdCI6MTc0MjU3NzA0MCwiZXhwIjoxNzQzODczMDQwfQ.HtYGoT_B5znpAnr-GnKXtAVlqAjtwNJgVhl_MMeYgiU
+}
+
+body:json {
+  {
+      "firstName": "Salim",
+      "lastName": "Talukdar",
+      "email": "salimkcsss7s@gmail.com",
+      "mobile": "123478887677",
+      "username": "salim1372",
+      "password": "salimt",
+      "address": "123 Main St, City, Country",
+      "internalReference": "ABC123",
+      "companyName": "Doe Industries",
+      "aggrementExpiryDate": "2025-12-31",
+      "potentialPayment": "7000",
+      "commitionRate": "5%",
+      "note": "good",
+      "endDate": "2025-12-31",
+      "agentType": "INTERNAL",
+      "startDate": "2025-12-31",
+      "agreementStatus": false
+  }
+}

@@ -1,0 +1,15 @@
+meta {
+  name: Get All users
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/user-management/user/users/
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTRkNzc2Mi05NDcxLTQ0MDQtYjdlYy01YTkxNTU4NjEyODAiLCJ1c2VyUG9ydGFsQ2F0ZWdvcnlJZCI6IjExZjRjMWRmLWM0YmEtNDY4ZC1iMWFlLWZjODAxNzkwMTMyYiIsImlhdCI6MTc0MTI3OTI0NSwiZXhwIjoxNzQyNTc1MjQ1fQ.GOz7iChxjZkGVZjN6v-_WZccwJ8IO8xzZ0aBMYeusi4
+}

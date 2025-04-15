@@ -1,0 +1,20 @@
+meta {
+  name: Assign a user in a Portal
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{BASE_URL}}/user-management/user/assign/portal
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+      "userId": "b891d563-02c3-4377-8ef8-8e5ae63f3d6e",
+      "portalCategoryId":["ba63545e-6a08-4c03-81e7-83832680d5f8","0889bbf2-278c-4b41-9cc4-77606a9ab623"]
+      // "categoryId": "0df82c9e-dc03-4291-8426-0278913c0176"
+  
+  }
+}

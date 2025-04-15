@@ -1,0 +1,28 @@
+meta {
+  name: UPDATE Role
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{BASE_URL}}/user-management/roles/9c4fa9b7-315c-4166-bea1-58ad1606044e
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "roleName": "admission-officer",
+    "modules": [
+      {
+        "moduleName": "admission",
+        "modulePermission": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+meta {
+  name: agent portal login
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/auth/login/?userportal=agent
+  body: json
+  auth: none
+}
+
+params:query {
+  userportal: agent
+}
+
+body:json {
+  {
+      "username":"agent",
+      "password":"12345678"
+  }
+}

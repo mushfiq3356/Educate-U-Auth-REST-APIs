@@ -1,0 +1,15 @@
+meta {
+  name: GET Roles
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{BASE_URL}}/user-management/roles?portal=admin
+  body: none
+  auth: none
+}
+
+params:query {
+  portal: admin
+}

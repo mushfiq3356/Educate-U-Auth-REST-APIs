@@ -1,0 +1,18 @@
+meta {
+  name: GET Role ( with permissions )
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{BASE_URL}}/user-management/roles/role-including-permissions
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "roleId": "9c4fa9b7-315c-4166-bea1-58ad1606044e",
+    "categoryId": "9edebdb2-5fce-49c2-9657-9102a0e1e03b"
+  }
+}

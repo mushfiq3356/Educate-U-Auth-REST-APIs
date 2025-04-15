@@ -1,0 +1,15 @@
+meta {
+  name: forcelogout
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{baseUrl}}/user-management/user/logout/2d9670cf-a929-4dd3-968c-d81fcfc3af54
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJmYzYwOGZlZC04N2Q1LTQ0OTktYjEwYi0xNGZiMjEzMTk2N2UiLCJ1c2VyUG9ydGFsQ2F0ZWdvcnlJZCI6ImI3ZDQ1MmM5LWRjMDItNDJkNi05NDA1LTdhMWIwYmE4ZmE0YSIsImlhdCI6MTc0MjM2MDQyOCwiZXhwIjoxNzQzNjU2NDI4fQ.aL_8wfqmoSIESaXWcsUexCgFNtif35NyhUo6Fnt2RBk
+}

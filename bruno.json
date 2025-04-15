@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "Educate-U Auth REST",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

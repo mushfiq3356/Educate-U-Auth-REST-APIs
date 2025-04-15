@@ -1,0 +1,29 @@
+meta {
+  name: Create User
+  type: http
+  seq: 15
+}
+
+post {
+  url: {{BASE_URL}}/user-management/user/register/
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJmYzYwOGZlZC04N2Q1LTQ0OTktYjEwYi0xNGZiMjEzMTk2N2UiLCJ1c2VyUG9ydGFsQ2F0ZWdvcnlJZCI6IjkxODE4ODRkLWUyNjMtNDA1Yy1hZjAyLTk2M2QxM2Q0OTVkNyIsImlhdCI6MTc0MjIwMjUzMSwiZXhwIjoxNzQzNDk4NTMxfQ.vlQ9chPKN7OEABSMZfqdAyKjMUfM7L9rAhvTbcq-UdE
+}
+
+body:json {
+  {
+      "email": "mushfiq@user.com",
+      "firstName": "mushfiq",
+      "lastName": "rahman",
+      "password": "kuanta",
+      // "mobile": "78965442230",
+      // "portalCategoryId": "140c5bde-7046-49e5-8605-9e13628d5e3a",
+      
+      "username": "mrahman"
+      // "address": "123 Main St, Springfield, IL"
+  }
+}

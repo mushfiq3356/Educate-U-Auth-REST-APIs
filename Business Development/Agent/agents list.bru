@@ -1,0 +1,21 @@
+meta {
+  name: agents list
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseUrl}}/business-development-management?agentType=INTERNAL&name=salim&status=PENDING
+  body: none
+  auth: bearer
+}
+
+params:query {
+  agentType: INTERNAL
+  name: salim
+  status: PENDING
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxYTE4NmExNi00ZTUzLTQzYmQtODY3OC1mMmU4NjI0N2IyNzYiLCJ1c2VyUG9ydGFsQ2F0ZWdvcnlJZCI6IjQ2ZGNkZjQ4LTcyMjAtNDkxMy04YTQ3LWM2ZDZjY2YwYWIwNyIsImlhdCI6MTc0MjU3NzA0MCwiZXhwIjoxNzQzODczMDQwfQ.HtYGoT_B5znpAnr-GnKXtAVlqAjtwNJgVhl_MMeYgiU
+}
