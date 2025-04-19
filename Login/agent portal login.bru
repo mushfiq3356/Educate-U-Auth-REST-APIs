@@ -5,7 +5,7 @@ meta {
 }
 
 post {
-  url: {{baseUrl}}/auth/login/?userportal=agent
+  url: {{BASE_URL}}/auth/login/?userportal=agent
   body: json
   auth: none
 }
@@ -17,6 +17,6 @@ params:query {
 body:json {
   {
       "username":"agent",
-      "password":"12345678"
+      "password":"123456"
   }
 }
