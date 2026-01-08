@@ -1,0 +1,59 @@
+meta {
+  name: user wise agreement
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseUrl}}/business-development-management/agent/agreement/users/81f93f86-1ce2-490f-9e3d-68182c716cc7
+  body: json
+  auth: bearer
+}
+
+headers {
+  ~Content-Type: application/pdf
+}
+
+auth:bearer {
+  token: 81f93f86-1ce2-490f-9e3d-68182c716cc7
+}
+
+body:json {
+  {
+      "agreement": "<h1>Your HTML Content</h1><p>Agreement EXTERNAL terms here...</p>",
+      "templateType": "EXTERNAL"
+  }
+}
+
+script:post-response {
+  var template = `
+  <style type="text/css">
+      .tftable {font-size:14px;color:#333333;width:100%;border-width: 1px;border-color: #87ceeb;border-collapse: collapse;}
+      .tftable th {font-size:18px;background-color:#87ceeb;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;text-align:left;}
+      .tftable tr {background-color:#ffffff;}
+      .tftable td {font-size:14px;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;}
+      .tftable tr:hover {background-color:#e0ffff;}
+  </style>
+  
+  <table class="tftable" border="1">
+      <tr>
+          <th>Content Type</th>
+          <th>Response</th>
+      </tr>
+      <tr>
+          <td>{{response.headers["Content-Type"]}}</td>
+          <td>PDF content</td>
+      </tr>
+  </table>
+  `;
+  
+  function constructVisualizerPayload() {
+  //     return {response: pm.response};
+  }
+  
+  // pm.visualizer.set(template, constructVisualizerPayload());
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,19 @@
+meta {
+  name: agents list
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/business-development-management/
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{ACCESS_TOKEN}}
+}
+
+settings {
+  encodeUrl: true
+}

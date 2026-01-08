@@ -1,0 +1,28 @@
+meta {
+  name: Assign a user in a Portal
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{baseUrl}}/user-management/user/assign/portal
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIzZGQyNTE1MS0wZWVjLTQwNTgtYjcxNC03NGEwYTZiNjVkOTAiLCJ1c2VyUG9ydGFsQ2F0ZWdvcnlJZCI6IjQwYTIxMzExLTMxZDYtNGViNC04YTE0LTA2MmI0ZDA3YzgyMSIsImlhdCI6MTc1MjU2MDE0NCwiZXhwIjoxNzUzODU2MTQ0fQ.KfQMcB7ngM0iCZlvGggDJyw2kM4leFyrb-b9WKO3YNY
+}
+
+body:json {
+  {
+      "userId": "fdbc0bfd-3292-4036-93c1-9f5261cf5100",
+      "portalCategoryId":["c9b1fbcf-e766-47a3-866d-181130706d45"]
+      // "categoryId": "0df82c9e-dc03-4291-8426-0278913c0176"
+  
+  }
+}
+
+settings {
+  encodeUrl: true
+}

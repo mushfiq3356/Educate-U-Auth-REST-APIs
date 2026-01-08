@@ -1,0 +1,32 @@
+meta {
+  name: register
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/student-management/
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{ACCESS_TOKEN}}
+}
+
+body:json {
+  {
+      "firstName": "salim",
+      "lastName": "vai",
+      "email": "salimkc7@gmail.com",
+      "mobile": "01518375925",
+      "username": "salim71",
+      "password": "salimt",
+      "address": "123 Main St, New York, NY",
+      "nationality": "BANGLADESHI"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

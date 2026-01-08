@@ -1,0 +1,26 @@
+meta {
+  name: student_login
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{baseUrl}}/auth/student-login/
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJlYmUwMzJmNS1lNzUyLTQ5Y2MtYjU2Yi0xMGIzYTNiN2ExZDciLCJ1c2VyUG9ydGFsQ2F0ZWdvcnlJZCI6IjJlNGUyMzYzLTkwNmEtNDliYS05NGZhLTkyMmY5Y2E5ZmQ3OCIsImlhdCI6MTc2NzQ1NTU4OSwiZXhwIjoxNzY4NzUxNTg5fQ.xXTKO8PUxU0f-wiCJppr5V49QDhzCB5Jr5LxR6v2fRk
+}
+
+body:json {
+  {
+      "username": "cevetohyc@mailinator.com",
+      "password": "123456"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,60 @@
+meta {
+  name: global setting
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{baseUrl}}/business-development-management/agent/global/setting
+  body: json
+  auth: bearer
+}
+
+headers {
+  ~Content-Type: application/pdf
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJmNDUzOWY3OC0yNGYxLTQyZDMtODIyYS1jMzczOTY4ZmE1YmMiLCJ1c2VyUG9ydGFsQ2F0ZWdvcnlJZCI6IjcwOWY3MGY5LTVjZDctNDdjYS05NjU5LTU0OTlmYjVhMjE5OCIsImlhdCI6MTc0NTEzNzI4MywiZXhwIjoxNzQ2NDMzMjgzfQ.4VaF1-43bOFxg3-rmixc1B3pxKXEJDdnP8swIEwh0cA
+}
+
+body:json {
+  {
+    "name": "ENROLLMENT",
+    "value": "OPEN"
+  }
+  
+}
+
+script:post-response {
+  var template = `
+  <style type="text/css">
+      .tftable {font-size:14px;color:#333333;width:100%;border-width: 1px;border-color: #87ceeb;border-collapse: collapse;}
+      .tftable th {font-size:18px;background-color:#87ceeb;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;text-align:left;}
+      .tftable tr {background-color:#ffffff;}
+      .tftable td {font-size:14px;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;}
+      .tftable tr:hover {background-color:#e0ffff;}
+  </style>
+  
+  <table class="tftable" border="1">
+      <tr>
+          <th>Content Type</th>
+          <th>Response</th>
+      </tr>
+      <tr>
+          <td>{{response.headers["Content-Type"]}}</td>
+          <td>PDF content</td>
+      </tr>
+  </table>
+  `;
+  
+  function constructVisualizerPayload() {
+  //     return {response: pm.response};
+  }
+  
+  // pm.visualizer.set(template, constructVisualizerPayload());
+}
+
+settings {
+  encodeUrl: true
+}

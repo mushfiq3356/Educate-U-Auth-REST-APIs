@@ -1,0 +1,52 @@
+meta {
+  name: Assign Module PERMANENT
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/user-management/user-modules/
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: 86adf58d-5244-49e1-a7c0-c9dd588a469c
+}
+
+body:json {
+  {
+      "userId": [
+          "47322017-d8fc-4993-abec-f9876d3c7e30"
+      ],
+      "portalCategories": [
+          {
+              "portalCategoryId": "841d0f58-868c-4c3d-93ad-b03d31a3c923",
+              "modules": [
+                  {
+                      "moduleId": "10a80246-b9f2-4ddd-883c-b67d6c03932a",
+                      "modulePermission": [
+                          "GET",
+                          "POST",
+                          "DELETE"
+                      ]
+                  }
+                  // ,
+                  //  {
+                  //     "moduleId": "183e3222-fb17-4656-b5a6-ff43b1039ebd",
+                  //     "modulePermission": [
+                  //         "GET",
+                  //         "POST",
+                  //         "DELETE"
+                  //     ]
+                  // }
+                
+              ]
+          }
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

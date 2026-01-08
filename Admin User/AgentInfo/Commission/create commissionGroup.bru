@@ -1,0 +1,26 @@
+meta {
+  name: create commissionGroup
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/business-development-management/agent/commission/groups/
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{ACCESS_TOKEN}}
+}
+
+body:json {
+  {
+      "name": "SILVERs",
+      "type": "EXTERNAL"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

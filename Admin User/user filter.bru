@@ -1,0 +1,19 @@
+meta {
+  name: user filter
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseUrl}}/user-management/user/users?portalCategoryName=admin
+  body: none
+  auth: inherit
+}
+
+params:query {
+  portalCategoryName: admin
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,28 @@
+meta {
+  name: termination
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{baseUrl}}/business-development-management/agreement-update
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{ACCESS_TOKEN}}
+}
+
+body:json {
+  {
+    "userId":"98caed6f-8ec5-491c-ba87-cdd6f5bdd333",
+    "agreementId":"19c74144-efab-4f53-b051-743ac4d50199",
+    "status":"INACTIVE"
+      
+  }
+}
+
+settings {
+  encodeUrl: true
+}

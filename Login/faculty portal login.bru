@@ -1,22 +1,22 @@
 meta {
-  name: agent portal login
+  name: faculty portal login
   type: http
-  seq: 2
+  seq: 3
 }
 
 post {
-  url: {{baseUrl}}/auth/login/?userportal=agent
+  url: {{baseUrl}}/auth/login/?userportal=faculty
   body: json
   auth: inherit
 }
 
 params:query {
-  userportal: agent
+  userportal: faculty
 }
 
 body:json {
   {
-      "username":"agent",
+      "username":"faculty",
       "password":"123456"
   }
 }

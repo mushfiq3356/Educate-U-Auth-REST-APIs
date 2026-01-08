@@ -1,0 +1,36 @@
+meta {
+  name: facultywise coruse modulelist Copy
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{baseUrl}}/faculty-management/courses-modules/e483bf9e-b2bf-4272-a984-8660e366154b
+  body: text
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{ACCESS_TOKEN}}
+}
+
+body:text {
+  {
+    "courseAssign": [
+      {
+        "userId": "e483bf9e-b2bf-4272-a984-8660e366154b",
+        "courseId": "35189e46-cb06-43b6-a478-8f40bca83ae2",
+        "courseModuleId": [
+          "441942bd-a7ae-42e4-bf4f-e58139f4b487",
+          "13c4fb11-5af9-416f-bc2c-880c23eac939"
+        ],
+        "role": ["TEACHING_ASSISTANT", "TEACHER"]
+      }
+    ]
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

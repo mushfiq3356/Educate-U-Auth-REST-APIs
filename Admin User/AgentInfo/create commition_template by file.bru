@@ -1,0 +1,23 @@
+meta {
+  name: create commition_template by file
+  type: http
+  seq: 15
+}
+
+post {
+  url: {{baseUrl}}/business-development-management/agent/upload
+  body: multipartForm
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIzYjZkNGY2Mi0yZTgzLTRmYmYtYTY5Yi0yNjEyNmI2OTM2MzkiLCJ1c2VyUG9ydGFsQ2F0ZWdvcnlJZCI6IjgwY2Y4NmMzLTVhYWMtNGE4OS04NWVkLTIxODMwMWJhNWNkZiIsImlhdCI6MTc0NDc4OTc5MCwiZXhwIjoxNzQ2MDg1NzkwfQ.gwtKPk5II-bFOhpC1Xmp5lA7B_CocV13IUZUwnpCyos
+}
+
+body:multipart-form {
+  file: @file(/C:/Users/Sifatul Amin/Downloads/Demo test1.csv)
+}
+
+settings {
+  encodeUrl: true
+}

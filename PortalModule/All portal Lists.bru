@@ -1,0 +1,19 @@
+meta {
+  name: All portal Lists
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/user-management/portals
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{ACCESS_TOKEN}}
+}
+
+settings {
+  encodeUrl: true
+}

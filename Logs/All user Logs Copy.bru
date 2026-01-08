@@ -1,0 +1,28 @@
+meta {
+  name: All user Logs Copy
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{baseUrl}}/user-management/user/logs/
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIzZGQyNTE1MS0wZWVjLTQwNTgtYjcxNC03NGEwYTZiNjVkOTAiLCJ1c2VyUG9ydGFsQ2F0ZWdvcnlJZCI6IjE1MjU2N2ZiLWMxZGQtNDQ1OS04MDU2LWMwMzAzNzFhZWJkMCIsImlhdCI6MTc1MTIwNTQ5NywiZXhwIjoxNzUxMjA3Mjk3fQ.Yt5KOnys16srANoiVvSqm2IJuSqnhJR2O5P1Xkj0SVM
+}
+
+body:json {
+  {
+    "page": 1,
+    "limit": 10,
+    "startDate": "2025-06-26",
+    "endDate": "2025-06-29"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,19 @@
+meta {
+  name: ceck user
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{baseUrl}}/user-management/user/check-user?username=kotkag
+  body: none
+  auth: inherit
+}
+
+params:query {
+  username: kotkag
+}
+
+settings {
+  encodeUrl: true
+}

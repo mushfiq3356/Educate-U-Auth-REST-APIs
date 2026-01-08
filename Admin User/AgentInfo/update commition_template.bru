@@ -1,0 +1,32 @@
+meta {
+  name: update commition_template
+  type: http
+  seq: 14
+}
+
+post {
+  url: {{baseUrl}}/business-development-management/agent/templates
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJhODgxNjgwOS00OTQ1LTQyYzgtYWI4NC01N2M3ODI3ZGMwMzIiLCJ1c2VyUG9ydGFsQ2F0ZWdvcnlJZCI6IjE4ZmZhNzQ5LTBlYzgtNDhhZi04N2U5LWQ5ZDUwYWVlYzhiNCIsImlhdCI6MTc0NDc0MDg0NSwiZXhwIjoxNzQ2MDM2ODQ1fQ.QipfS2ClWA0vlafpYxxX6AFHV7cZkF70Z22d8zhKa8k
+}
+
+body:json {
+  {
+    "tierName": "tier-2",
+    "studentRangeLower": 50,
+    "studentRangeUpper": 100,
+    "rate": 0.15,
+    "bonus": 500.0,
+    "agentEnrollment": "EXTERNAL",
+    "applicationsubmission": true
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

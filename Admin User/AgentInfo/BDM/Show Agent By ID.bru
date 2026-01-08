@@ -1,0 +1,19 @@
+meta {
+  name: Show Agent By ID
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/business-development-management/98caed6f-8ec5-491c-ba87-cdd6f5bdd3333
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{ACCESS_TOKEN}}
+}
+
+settings {
+  encodeUrl: true
+}

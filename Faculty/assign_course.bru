@@ -1,0 +1,37 @@
+meta {
+  name: assign_course
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{baseUrl}}/faculty-management/assign-course/
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{ACCESS_TOKEN}}
+}
+
+body:json {
+  {
+      "courseAssign": [
+          {
+              "userId": "7aa1dd8f-cb63-4add-8bb4-9780b178ff25",
+              "courseId": "e47acb36-6f15-4e0b-a9c1-807833857d29",
+              "courseModuleId": [
+                  "dcc9aec1-c929-41b5-a4d2-81658f0af803"
+                  
+              ],
+              "role": [
+                  "TEACHING_ASSISTANT"
+              ]
+          }
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

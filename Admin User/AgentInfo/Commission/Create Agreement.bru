@@ -1,0 +1,62 @@
+meta {
+  name: Create Agreement
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{baseUrl}}/business-development-management/agent/agreement/
+  body: json
+  auth: bearer
+}
+
+headers {
+  ~Content-Type: application/pdf
+}
+
+auth:bearer {
+  token: {{ACCESS_TOKEN}}
+}
+
+body:json {
+  {
+      "name": "Standard Internship Agreement",
+      "agreement": "<p>This agreement is made between the awarding body and the student...</p>",
+      "awardingBodyId": "ecaae6a8-3866-45a8-9335-4f21f528f19f",
+      "commissionGroupId": "946c6d3e-5b49-4e6d-9acf-b3cd5f52f876",
+      "templateType": "INTERNAL"
+  }
+}
+
+script:post-response {
+  var template = `
+  <style type="text/css">
+      .tftable {font-size:14px;color:#333333;width:100%;border-width: 1px;border-color: #87ceeb;border-collapse: collapse;}
+      .tftable th {font-size:18px;background-color:#87ceeb;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;text-align:left;}
+      .tftable tr {background-color:#ffffff;}
+      .tftable td {font-size:14px;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;}
+      .tftable tr:hover {background-color:#e0ffff;}
+  </style>
+  
+  <table class="tftable" border="1">
+      <tr>
+          <th>Content Type</th>
+          <th>Response</th>
+      </tr>
+      <tr>
+          <td>{{response.headers["Content-Type"]}}</td>
+          <td>PDF content</td>
+      </tr>
+  </table>
+  `;
+  
+  function constructVisualizerPayload() {
+  //     return {response: pm.response};
+  }
+  
+  // pm.visualizer.set(template, constructVisualizerPayload());
+}
+
+settings {
+  encodeUrl: true
+}

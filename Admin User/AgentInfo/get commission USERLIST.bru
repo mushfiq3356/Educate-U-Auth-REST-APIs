@@ -1,0 +1,26 @@
+meta {
+  name: get commission USERLIST
+  type: http
+  seq: 12
+}
+
+get {
+  url: {{baseUrl}}/business-development-management/agent/commission/userlist/f74cc624-e3ca-4bc2-884a-0030368b89d6
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJlYzVjMTM2Yy1iZjI0LTRhZmItYjZlYS03NjI1OGRjNTU1ZDgiLCJ1c2VyUG9ydGFsQ2F0ZWdvcnlJZCI6ImEzN2U5ZTRmLTQxZTctNDQwMS05MGNkLTExZmYwODJiN2Y4ZCIsImlhdCI6MTc0NTEyODYzNiwiZXhwIjoxNzQ2NDI0NjM2fQ.6pYFmRFNvnJkR7I-L5KFuuAK5BPUJgws_e6JLnY9nVc
+}
+
+body:json {
+  {
+      "name": "SILVER",
+      "type": "INTERNAL"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,27 @@
+meta {
+  name: Date reminder
+  type: http
+  seq: 13
+}
+
+post {
+  url: {{baseUrl}}/business-development-management/agent/expiry/remainders
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI4OTFkM2Q2Ni03MTcyLTRkODgtODEyNC00MGFhNGM0YTEzOTEiLCJ1c2VyUG9ydGFsQ2F0ZWdvcnlJZCI6IjgwMzIyMmZkLTE4YWItNGQ1OS1hNDRhLWE4YzhjZGFhZTAyZiIsImlhdCI6MTc0NTE3NDEzNSwiZXhwIjoxNzQ2NDcwMTM1fQ.-udOxRT60xBsYxpi4dsdRlscsSJYYm74V1tTqwaaNw4
+}
+
+body:json {
+  {
+    "daysBefore": 3
+    
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

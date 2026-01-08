@@ -1,0 +1,29 @@
+meta {
+  name: assign portal modules
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{baseUrl}}/user-management/portals/assign-modules
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI4MTlmMzhmNC02MTNiLTRhYzAtYjZjMi00YWIxZWZmODYxMzEiLCJ1c2VyUG9ydGFsQ2F0ZWdvcnlJZCI6ImQ3ZDAyZDFmLTc2NmYtNDc2OC1hYWM4LTU1ZDdjNjZlOGZhOCIsImlhdCI6MTc2NDQ5MDg0OCwiZXhwIjoxNzY1Nzg2ODQ4fQ.NP8cyI32mujon69_X6Jqvie20FhbBECgtmXMhM6KIoI
+}
+
+body:json {
+  {
+      "portalCategoryId": "5e12084e-bf45-45f6-ad7d-241c97ff442a",
+      "moduleIds": [
+          "91ca96c4-1571-4cdf-a1ed-7a192df0e137",
+          "91ca96c4-1571-4cdf-a1ed-7a192df0e133"
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

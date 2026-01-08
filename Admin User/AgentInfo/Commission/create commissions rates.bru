@@ -1,0 +1,53 @@
+meta {
+  name: create commissions rates
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/business-development-management/agent/commission/groups/commissions
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{ACCESS_TOKEN}}
+}
+
+body:json {
+  {
+      "commissionGroupId": "19a27796-6337-488d-bbf6-101287dac7c9",
+      "bonus": 700,
+      "studentLimit": 2050,
+      "commissions": [
+          {
+              "studentRangeLower": 1,
+              "studentRangeUpper": 50,
+              "rate1": 5,
+              "rate2": 10,
+              "rate3": 15,
+              "rate4": 20
+          },
+          {
+              "studentRangeLower": 51,
+              "studentRangeUpper": 100,
+              "rate1": 6,
+              "rate2": 11,
+              "rate3": 16,
+              "rate4": 21
+          },
+          {
+              "studentRangeLower": 101,
+              "studentRangeUpper": 150,
+              "rate1": 7,
+              "rate2": 12,
+              "rate3": 17,
+              "rate4": 22
+          }
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,33 @@
+meta {
+  name: register
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/faculty-management/register
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{ACCESS_TOKEN}}
+}
+
+body:json {
+  {
+    "firstName": "John ",
+    "lastName": "Doe",
+    "email": "johnvai15.doe@example.com",
+    "mobile": "12345678905",
+    "username": "john_doe_vai11",
+    "password": "securePassword123!",
+    "userStatus": "ACTIVE"
+   
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

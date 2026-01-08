@@ -1,0 +1,43 @@
+meta {
+  name: registration
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/business-development-management/register/
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{ACCESS_TOKEN}}
+}
+
+body:json {
+  {
+      "username": "helloAgent2",
+      "firstName": "bm",
+      "lastName": "1",
+      "password": "123456",
+      "email": "bm1@example.com",
+      "mobile": "0123456789",
+      "agentType": "external",
+      "awardingBodyTemplates": [
+          {
+              "awardingBodyId": "00865f3a-a099-414e-971c-5911258e1b33",
+              "commissionTemplateId": "9d5df80a-a56b-40e5-99a4-5b581c346d13"
+          }
+      ],
+      "companyName": "AgentAdmin_1",
+      "agreementStatus": true,
+      "note": "N/A",
+      "address": "test adderess",
+      "startDate": "2025-09-29T18:00:00.000Z",
+      "endDate": "2025-10-30T18:00:00.000Z"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

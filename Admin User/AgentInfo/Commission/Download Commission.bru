@@ -1,0 +1,27 @@
+meta {
+  name: Download Commission
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{baseUrl}}/business-development-management/agent/commission/download?templateType=EXTERNAL
+  body: text
+  auth: bearer
+}
+
+params:query {
+  templateType: EXTERNAL
+}
+
+headers {
+  ~Content-Type: application/pdf
+}
+
+auth:bearer {
+  token: {{ACCESS_TOKEN}}
+}
+
+settings {
+  encodeUrl: true
+}

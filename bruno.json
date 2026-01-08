@@ -1,6 +1,6 @@
 {
   "version": "1",
-  "name": "Educate-U Auth REST",
+  "name": "Educate_U_Auth",
   "type": "collection",
   "ignore": [
     "node_modules",

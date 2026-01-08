@@ -1,0 +1,63 @@
+meta {
+  name: User wise all module Lists
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{baseUrl}}/user-management/user-modules/modulelist/be0ddd52-a905-472d-bbb8-f7c9af5e366b
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJlNzZlMTI3MS1mYWZkLTQyODQtODk0OC00ZGFlMTgyMDI5MGUiLCJ1c2VyUG9ydGFsQ2F0ZWdvcnlJZCI6IjQyZDI1ODUyLWQxYjctNDAwNi05ODRlLTk2OTIxODdkZjczNyIsImlhdCI6MTc0NDcxMjgwMywiZXhwIjoxNzQ2MDA4ODAzfQ.AMo2PL15QXPXd1J7pAn95f4MoP38bbylq7q5iSdt06k
+}
+
+script:post-response {
+  var template = `
+  <style type="text/css">
+      .tftable {font-size:14px;color:#333333;width:100%;border-width: 1px;border-color: #87ceeb;border-collapse: collapse;}
+      .tftable th {font-size:18px;background-color:#87ceeb;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;text-align:left;}
+      .tftable tr {background-color:#ffffff;}
+      .tftable td {font-size:14px;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;}
+      .tftable tr:hover {background-color:#e0ffff;}
+  </style>
+  
+  <table class="tftable" border="1">
+      <tr>
+          <th>Portal Name</th>
+          <th>Module Name</th>
+          <th>Source</th>
+          <th>Module Permission</th>
+          <th>Permission Type</th>
+          <th>Permission Start Date</th>
+          <th>Permission End Date</th>
+      </tr>
+      
+      {{#each response.data}}
+          {{#each modules}}
+              <tr>
+                  <td>{{../portalName}}</td>
+                  <td>{{moduleName}}</td>
+                  <td>{{source}}</td>
+                  <td>{{modulePermission}}</td>
+                  <td>{{permissionType}}</td>
+                  <td>{{permissionStartDate}}</td>
+                  <td>{{permissionEndDate}}</td>
+              </tr>
+          {{/each}}
+      {{/each}}
+  </table>
+  `;
+  
+  function constructVisualizerPayload() {
+      return { response: res.getBody() };
+  }
+  
+  // pm.visualizer.set(template, constructVisualizerPayload());
+}
+
+settings {
+  encodeUrl: true
+}

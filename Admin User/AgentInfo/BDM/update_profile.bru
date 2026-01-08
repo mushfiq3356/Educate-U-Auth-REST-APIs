@@ -1,0 +1,30 @@
+meta {
+  name: update_profile
+  type: http
+  seq: 3
+}
+
+patch {
+  url: {{baseUrl}}/business-development-management/dde5e943-ba76-473e-8cf3-a75b9f8f3384
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{ACCESS_TOKEN}}
+}
+
+body:json {
+  {
+    "awardingBodyTemplates": [
+          {
+              "awardingBodyId": "00865f3a-a099-414e-971c-5911258e1b33",
+              "commissionTemplateId": "9d5df80a-a56b-40e5-99a4-5b581c346d13"
+          }
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

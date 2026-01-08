@@ -1,0 +1,26 @@
+meta {
+  name: assign user to commission
+  type: http
+  seq: 9
+}
+
+post {
+  url: {{baseUrl}}/business-development-management/agent/assign/
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxYmViMzNjOS0zZmNiLTRjMzktOTExMy0yZmJlY2Y2NGI5MDUiLCJ1c2VyUG9ydGFsQ2F0ZWdvcnlJZCI6IjVjOTc3NTgwLWZjMDMtNGIyNC04Yzg2LTFkZWM5NGU3NmZiZiIsImlhdCI6MTc0NDk3NzUxMCwiZXhwIjoxNzQ2MjczNTEwfQ.hEwTTyjIUdRuhbNwYRw6J84Me3ztYWLP9Dv5okJ1SsU
+}
+
+body:json {
+  {
+    "commissionGroupId": "ec91babb-779f-4e75-a462-4ce8342effea",
+    "userIds": ["99c26692-1a0b-447c-999a-77fc4b554276", "ba257c43-0fd8-4b78-8175-ebcda08f4e9a"]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

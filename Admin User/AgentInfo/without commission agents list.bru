@@ -1,0 +1,23 @@
+meta {
+  name: without commission agents list
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/business-development-management/unassign/users?agentType=INTERNAL
+  body: json
+  auth: bearer
+}
+
+params:query {
+  agentType: INTERNAL
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJlYzQ1ZjNjMC02OTY2LTRmOGUtYTE4NC0zMzQyNGE3ZWY3ZjQiLCJ1c2VyUG9ydGFsQ2F0ZWdvcnlJZCI6IjliMTBjOTA4LTAzMDEtNDU0NC1iMTMwLTA5MTNlMjQ5YzY0MiIsImlhdCI6MTc0NTM5NTkxMCwiZXhwIjoxNzQ2NjkxOTEwfQ.uUub7yr2odNl9w_t8GezArtuhVycAf1UUHny5VDEEp8
+}
+
+settings {
+  encodeUrl: true
+}

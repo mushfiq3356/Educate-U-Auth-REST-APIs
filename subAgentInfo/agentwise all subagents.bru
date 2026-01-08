@@ -1,0 +1,35 @@
+meta {
+  name: agentwise all subagents
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/sub-agent-management/agent-wise/98caed6f-8ec5-491c-ba87-cdd6f5bdd333
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{ACCESS_TOKEN}}
+}
+
+body:json {
+  {
+      // "email": "testsdd8@example.com",
+      // "password": "123456",
+      // "mobile": "1234554467928",
+      "username": "subAegentssa",
+      // "firstName": "Subagent",
+      // "lastName": "test2",
+      "address": "123 Main St, Cityvillessf dhaka, Country",
+      "internalReference": "user-ref-002",
+      "companyName": "Arbsssree subAegen2t8d7",
+      "reportingTo": "3915bb8f-b8a1-43f6-8c33-1c6bc599ba2e"
+  
+  }
+}
+
+settings {
+  encodeUrl: true
+}

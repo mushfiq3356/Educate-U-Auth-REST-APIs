@@ -1,0 +1,23 @@
+meta {
+  name: get commission
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/business-development-management/agent/commission/groups?type=EXTERNAL
+  body: json
+  auth: bearer
+}
+
+params:query {
+  type: EXTERNAL
+}
+
+auth:bearer {
+  token: {{ACCESS_TOKEN}}
+}
+
+settings {
+  encodeUrl: true
+}

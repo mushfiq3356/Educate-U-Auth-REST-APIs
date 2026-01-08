@@ -1,0 +1,45 @@
+meta {
+  name: Assign module Temporary
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/user-management/user-modules/temporary
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTRkNzc2Mi05NDcxLTQ0MDQtYjdlYy01YTkxNTU4NjEyODAiLCJ1c2VyUG9ydGFsQ2F0ZWdvcnlJZCI6IjExZjRjMWRmLWM0YmEtNDY4ZC1iMWFlLWZjODAxNzkwMTMyYiIsImlhdCI6MTc0MTI3OTI0NSwiZXhwIjoxNzQyNTc1MjQ1fQ.GOz7iChxjZkGVZjN6v-_WZccwJ8IO8xzZ0aBMYeusi4
+}
+
+body:json {
+  {
+      "userId": [
+          "e94179a4-7ef0-4024-bdb6-f5e1de6dd65e"
+      ],
+      "portalCategories": [
+          {
+              "portalCategoryId": "205bc8b8-408a-41ce-aee2-192e58d59996",
+              "permissionType": "TEMPORARY",
+              //   "manualRevocation": true,
+              "days": "5",
+              "modules": [
+                  {
+                      "moduleId": "ada6e5b2-c769-4ee4-98c8-5ddaa7e8bacd",
+                      "modulePermission": [
+                          "GET",
+                          "POST",
+                          "DELETE"
+                      ]
+                  }
+              ]
+          }
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

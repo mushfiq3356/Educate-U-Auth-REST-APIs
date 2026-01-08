@@ -1,0 +1,19 @@
+meta {
+  name: User wise portal Lists
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/user-management/user/portal/2ad312ee-e6e7-4f88-be2d-61edea3d69d9
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxYTE4NmExNi00ZTUzLTQzYmQtODY3OC1mMmU4NjI0N2IyNzYiLCJ1c2VyUG9ydGFsQ2F0ZWdvcnlJZCI6IjQ2ZGNkZjQ4LTcyMjAtNDkxMy04YTQ3LWM2ZDZjY2YwYWIwNyIsImlhdCI6MTc0MjcxNzM1MywiZXhwIjoxNzQ0MDEzMzUzfQ.S0tljS0imy2eJTgm-tIGwFvrOiko2tIYlBaWwlx42nY
+}
+
+settings {
+  encodeUrl: true
+}

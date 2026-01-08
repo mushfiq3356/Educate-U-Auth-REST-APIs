@@ -1,0 +1,39 @@
+meta {
+  name: update
+  type: http
+  seq: 2
+}
+
+patch {
+  url: {{baseUrl}}/faculty-management/e483bf9e-b2bf-4272-a984-8660e366154b
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTRkNzc2Mi05NDcxLTQ0MDQtYjdlYy01YTkxNTU4NjEyODAiLCJ1c2VyUG9ydGFsQ2F0ZWdvcnlJZCI6IjExZjRjMWRmLWM0YmEtNDY4ZC1iMWFlLWZjODAxNzkwMTMyYiIsImlhdCI6MTc0MTI3OTI0NSwiZXhwIjoxNzQyNTc1MjQ1fQ.GOz7iChxjZkGVZjN6v-_WZccwJ8IO8xzZ0aBMYeusi4
+}
+
+body:json {
+  {
+      "courseModule": [
+          {
+              "moduleName": "Mathematics",
+              "modulePermission": [
+                  "GET",
+                  "POST"
+              ]
+          },
+          {
+              "moduleName": "Science",
+              "modulePermission": [
+                  "GET"
+              ]
+          }
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

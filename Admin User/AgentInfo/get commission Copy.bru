@@ -1,0 +1,31 @@
+meta {
+  name: get commission Copy
+  type: http
+  seq: 11
+}
+
+post {
+  url: {{baseUrl}}/business-development-management/agent/commission/download?type=INTERNAL&format=csv
+  body: json
+  auth: bearer
+}
+
+params:query {
+  type: INTERNAL
+  format: csv
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI3ZWYzNzUxYy04ZTBlLTQ0NTAtOTU0Yi1lYTVmYjM5MTcxNzkiLCJ1c2VyUG9ydGFsQ2F0ZWdvcnlJZCI6IjM4OWExMzcxLTZjMWUtNDg2YS04ZDE1LWFjNWIxZmUwZjc3YiIsImlhdCI6MTc0NTMwMDg0NCwiZXhwIjoxNzQ2NTk2ODQ0fQ.S9zLi8d2NX2ZCJxymI4jOpMwaL2sCfwtQlpsfK9SS1E
+}
+
+body:json {
+  {
+      "name": "SILVER",
+      "type": "INTERNAL"
+  }
+}
+
+settings {
+  encodeUrl: true
+}
