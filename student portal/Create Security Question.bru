@@ -1,0 +1,22 @@
+meta {
+  name: Create Security Question
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{BASE_URL}}/student-auth/security-questions
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name":"whats your ex girlfriend name"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

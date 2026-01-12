@@ -1,0 +1,22 @@
+meta {
+  name: update security Question
+  type: http
+  seq: 8
+}
+
+patch {
+  url: {{BASE_URL}}/student-auth/security-questions/d17b9414-404b-4c66-82a9-69a26120c0d4
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name":"what's your ex girlfriend name"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
