@@ -1,0 +1,27 @@
+meta {
+  name: update profile
+  type: http
+  seq: 12
+}
+
+put {
+  url: {{BASE_URL}}/student-auth/profile
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJkZTljZDA2Ni0zMjhlLTQ2MmEtYTJkYy03MWYwMzQwYTVmYjIiLCJpYXQiOjE3NjgzNzkyODksImV4cCI6MTc2OTY3NTI4OX0.1UifnqtfMXIFc4GGBr7sZHAWENDBS8h5tH6yP52HaXc
+}
+
+body:json {
+  {
+    "alternateEmail":"salimkc7@yahoo.com",
+    "bio":"good"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
