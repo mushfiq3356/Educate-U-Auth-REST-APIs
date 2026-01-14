@@ -1,0 +1,20 @@
+meta {
+  name: getProfile
+  type: http
+  seq: 11
+}
+
+get {
+  url: {{BASE_URL}}/student-auth/profile
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJkZTljZDA2Ni0zMjhlLTQ2MmEtYTJkYy03MWYwMzQwYTVmYjIiLCJpYXQiOjE3NjgyODU5MjUsImV4cCI6MTc2OTU4MTkyNX0.XvCE3_5QC4wPSwcGX3XdKNbFNHwhogaY9-VquvboX0M
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
