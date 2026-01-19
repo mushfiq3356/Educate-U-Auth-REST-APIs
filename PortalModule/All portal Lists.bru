@@ -5,7 +5,7 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/user-management/portals
+  url: {{BASE_URL}}/user-management/portals
   body: json
   auth: bearer
 }
@@ -16,4 +16,5 @@ auth:bearer {
 
 settings {
   encodeUrl: true
+  timeout: 0
 }
