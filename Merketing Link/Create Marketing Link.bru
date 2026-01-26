@@ -1,0 +1,29 @@
+meta {
+  name: Create Marketing Link
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{BASE_URL}}/marketing-link
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIyZmFiNDE5OS1iY2JjLTQ1MjAtYWI3NC0xMjljMThhZjQ1MGQiLCJ1c2VyUG9ydGFsQ2F0ZWdvcnlJZCI6IjMwNzUyZTczLTkwYTYtNDhhYS05YzI3LWEzMWE4YTRlMTMzOCIsImlhdCI6MTc2OTI3NzE5MCwiZXhwIjoxNzcwNTczMTkwfQ.77b-KSvzZdfQor4xZWTp12bEElN8OR5oqSfwDi_2hec
+}
+
+body:json {
+  {
+    "marketingLinkName": "X",
+    "status": "INACTIVE",
+    "startDate": "2025-01-01",
+    "endDate": "2025-02-01"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

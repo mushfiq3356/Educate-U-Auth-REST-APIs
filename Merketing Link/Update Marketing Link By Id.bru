@@ -1,0 +1,29 @@
+meta {
+  name: Update Marketing Link By Id
+  type: http
+  seq: 3
+}
+
+patch {
+  url: {{BASE_URL}}/marketing-link/3e24f670-c578-4226-96b7-a3614427f994
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIyZmFiNDE5OS1iY2JjLTQ1MjAtYWI3NC0xMjljMThhZjQ1MGQiLCJ1c2VyUG9ydGFsQ2F0ZWdvcnlJZCI6IjMwNzUyZTczLTkwYTYtNDhhYS05YzI3LWEzMWE4YTRlMTMzOCIsImlhdCI6MTc2OTI0MjgxNCwiZXhwIjoxNzcwNTM4ODE0fQ.90sEmsY_I4Drr6KbtLpQd5OfIGuxbUuS87tBjrD0qsk
+}
+
+body:json {
+  {
+    "marketingLinkName": "Facebook",
+    "status": "ACTIVE",
+    "startDate": "2025-01-01",
+    "endDate": "2025-02-01"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -1,0 +1,99 @@
+meta {
+  name: Create Applicant
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{BASE_URL}}/application-management/create-applicant
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: 
+}
+
+body:json {
+  {
+    "status": "PENDING",
+    "stage": "NEW",
+    "personalInformation": {
+      "firstName": "John",
+      "lastName": "Doe",
+      "dateOfBirth": "1990-01-01T00:00:00.000Z",
+      "email": "admin@user.com",
+      "countryOfBirth": "USA",
+      "currentNationality": "American",
+      "sex": "MALE",
+      "ethnicity": "Caucasian",
+      "mobileNumber": "+1234567890",
+      "countryOfResidence": "USA",
+      "currentAddress": "123 Main St",
+      "currentPostCode": "12345",
+      "permanentAddress": "123 Main St",
+      "nationalIdentityType": "Passport",
+      "nationalIdentityNumber": "A12345678"
+    },
+    "academicBackground": {
+      "highestLevelOfQualification": "Bachelor's Degree",
+      "areaOfQualification": "Computer Science",
+      "gradeOrResult": "First Class",
+      "yearCompleted": "2012",
+      "countryOfIssue": "USA",
+      "institutionName": "Harvard University"
+    },
+    "courseSelection": {
+      "course": "27e777d4-751f-41fc-8440-3b43fd8c8fd3",
+      "awardingBodyId": "57892868-01ab-435c-8091-7cb1d2b2cdba",
+      "sessionId": "a3f9419e-1528-472d-b67c-233d258c7b1b",
+      "yearOfCourse": "2026"
+    },
+    "personalStatement": {
+      "statement": "I have always been passionate about technology and innovation."
+    },
+    "disabilityAndAccessibility": {
+      "disabilityAndAccessibility": [
+        "one",
+        "two"
+      ]
+    },
+    "nextOfKin": {
+      "relationship": "Brother",
+      "fullName": "James Doe",
+      "phoneOrMobile": "+1234567891",
+      "address": "456 Elm St"
+    },
+    "fund": {
+      "source": "Self-funded"
+    },
+    "reference": {
+      "relationship": "Professor"
+    },
+    "criminalBackground": {
+      "offenseOrPenalty": "YES",
+      "offenseOrPenaltyDetails": "asdf",
+      "disqualificationOrSanction": "YES",
+      "disqualificationOrSanctionDetails": "asdf",
+      "policeClearance": "YES"
+    },
+    "supportingDocument": {
+      "nationalIdentification": [
+        "one"
+      ],
+      "policeClearance": [
+        "one"
+      ],
+      "otherDocument": [
+        "one",
+        "two",
+        "three"
+      ]
+    }
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

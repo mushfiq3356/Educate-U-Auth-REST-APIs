@@ -5,7 +5,7 @@ meta {
 }
 
 post {
-  url: {{baseUrl}}/auth/login/?userportal=agent
+  url: {{BASE_URL}}/auth/login/?userportal=agent
   body: json
   auth: inherit
 }
@@ -16,11 +16,12 @@ params:query {
 
 body:json {
   {
-      "username":"agent",
+      "username":"bm1",
       "password":"123456"
   }
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }

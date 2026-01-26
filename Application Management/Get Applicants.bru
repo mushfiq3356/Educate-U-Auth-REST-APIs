@@ -1,0 +1,20 @@
+meta {
+  name: Get Applicants
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{BASE_URL}}/marketing-link
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIyZmFiNDE5OS1iY2JjLTQ1MjAtYWI3NC0xMjljMThhZjQ1MGQiLCJ1c2VyUG9ydGFsQ2F0ZWdvcnlJZCI6IjMwNzUyZTczLTkwYTYtNDhhYS05YzI3LWEzMWE4YTRlMTMzOCIsImlhdCI6MTc2OTI3NzE5MCwiZXhwIjoxNzcwNTczMTkwfQ.77b-KSvzZdfQor4xZWTp12bEElN8OR5oqSfwDi_2hec
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
