@@ -5,9 +5,13 @@ meta {
 }
 
 get {
-  url: {{BASE_URL}}/application-management
+  url: {{BASE_URL}}/marketing-link
   body: none
-  auth: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIyZmFiNDE5OS1iY2JjLTQ1MjAtYWI3NC0xMjljMThhZjQ1MGQiLCJ1c2VyUG9ydGFsQ2F0ZWdvcnlJZCI6IjMwNzUyZTczLTkwYTYtNDhhYS05YzI3LWEzMWE4YTRlMTMzOCIsImlhdCI6MTc2OTQxOTEwNiwiZXhwIjoxNzcwNzE1MTA2fQ.mJrr66qIhq8kwsDeK-nEWVICUpApmpmrPqAXwI_boL4
 }
 
 settings {
