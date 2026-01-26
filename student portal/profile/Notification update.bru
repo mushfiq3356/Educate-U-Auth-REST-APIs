@@ -1,0 +1,31 @@
+meta {
+  name: Notification update
+  type: http
+  seq: 7
+}
+
+patch {
+  url: {{BASE_URL}}/student-portal/notifications
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJkOGQ4MDJhNS1mYmIzLTQ1ZmUtOTcwOS1kZWIyZDBkNTc5YzEiLCJpYXQiOjE3NjkzMzg4OTAsImV4cCI6MTc3MDYzNDg5MH0.VK4t0kv_ueJKLzzcoMsbR5T6UPzoDWU-Qy0dbwA-sds
+}
+
+body:json {
+  {
+    "emailNotification": true,
+    "assignmentNotification": true,
+    "gradeUpdate": false,
+    "forumReply": true,
+    "announcements": true
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -1,0 +1,20 @@
+meta {
+  name: Notification
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{BASE_URL}}/student-portal/notifications
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIyMGFmZDM2Ni03MGZhLTRhNDItOTUyMS0zZWFhNDA0OGYxNzciLCJpYXQiOjE3Njk0MDcxNzgsImV4cCI6MTc3MDcwMzE3OH0.VbZSz3MtRQRUe69Di3wbnf7kVP1t5s47tYpayr0s7to
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
