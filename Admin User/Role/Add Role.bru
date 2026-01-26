@@ -1,0 +1,30 @@
+meta {
+  name: Add Role
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/roles/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "name": "Admin",
+      "application": [
+          "GET",
+          "POST",
+          "UPDATE"
+      ],
+      "startDate": "2025-01-20T00:00:00.000Z",
+      "endDate": "2026-01-20T00:00:00.000Z",
+      "agentType": "INTERNAL"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

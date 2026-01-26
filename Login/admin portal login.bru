@@ -5,7 +5,7 @@ meta {
 }
 
 post {
-  url: {{baseUrl}}/auth/login/?userportal=admin
+  url: {{BASE_URL}}/auth/login/?userportal=admin
   body: json
   auth: inherit
 }
@@ -23,4 +23,5 @@ body:json {
 
 settings {
   encodeUrl: true
+  timeout: 0
 }

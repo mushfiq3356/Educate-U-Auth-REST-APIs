@@ -1,0 +1,64 @@
+meta {
+  name: update Role
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/user-management/roles/cbf51200-dc25-4503-9f7d-c1727aea1ec1
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "roleName": "agent",
+      "modules": [
+          {
+              "moduleId": "039983a5-3d78-4e15-8302-48ce04a8def5",
+              "moduleName": "marketing-link",
+              "modulePermission": [
+                  "GET",
+                  "POST",
+                  "DELETE"
+              ],
+              "categoryId": "c6b10754-99f3-48ad-a84a-3fa29d9d3b80"
+          },
+          {
+              "moduleId": "c8be7d00-5654-4ddb-bcc9-64ba51a75e8c",
+              "moduleName": "sub-agent-management",
+              "modulePermission": [
+                  "GET",
+                  "POST",
+                  "DELETE"
+              ],
+              "categoryId": "c6b10754-99f3-48ad-a84a-3fa29d9d3b80"
+          },
+          {
+              "moduleId": "0a1a7910-d8f9-477e-a585-b92df4b90934",
+              "moduleName": "application-management",
+              "modulePermission": [
+                  "GET",
+                  "POST",
+                  "DELETE"
+              ],
+              "categoryId": "c6b10754-99f3-48ad-a84a-3fa29d9d3b80"
+          },
+          {
+              "moduleId": "039983a5-3d78-4e15-8302-48ce04a8defa",
+              "moduleName": "agent-awarding-bodies",
+              "modulePermission": [
+                  "GET",
+                  "POST",
+                  "DELETE"
+              ],
+              "categoryId": "c6b10754-99f3-48ad-a84a-3fa29d9d3b80"
+          }
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

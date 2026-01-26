@@ -1,0 +1,26 @@
+meta {
+  name: Assign Role
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{BASE_URL}}/user-management/user/assign/role
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "userId": "b891d563-02c3-4377-8ef8-8e5ae63f3d6e",
+      "admin": {
+          "roleId": "46064d70-4a0d-4e21-b13d-062bbedb65c6",
+          "roleName": "admission-officer"
+      }
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

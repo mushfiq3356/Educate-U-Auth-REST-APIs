@@ -1,0 +1,196 @@
+{
+	"info": {
+		"_postman_id": "1397cd94-7fee-4ba4-a998-b0628c5fb659",
+		"name": "Role",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25375635",
+		"_collection_link": "https://crimson-capsule-976550.postman.co/workspace/Pen_Authentication~62a5f8ad-ebad-4da1-9244-e908bd457863/collection/25375635-1397cd94-7fee-4ba4-a998-b0628c5fb659?action=share&source=collection_link&creator=25375635"
+	},
+	"item": [
+		{
+			"name": "All Role Lists",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{ACCESS_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/user-management/roles?portal=agent",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"user-management",
+						"roles"
+					],
+					"query": [
+						{
+							"key": "portal",
+							"value": "agent"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All Role Lists with Permission",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{ACCESS_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/user-management/roles?portal=agent",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"user-management",
+						"roles"
+					],
+					"query": [
+						{
+							"key": "portal",
+							"value": "agent"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Role",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Admin\",\r\n    \"application\": [\r\n        \"GET\",\r\n        \"POST\",\r\n        \"UPDATE\"\r\n    ],\r\n    \"startDate\": \"2025-01-20T00:00:00.000Z\",\r\n    \"endDate\": \"2026-01-20T00:00:00.000Z\",\r\n    \"agentType\": \"INTERNAL\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/roles/",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"roles",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Role",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJhODkwNzczOS1kMjczLTRmZjItYTJiMy0zMWM4MDZiNDk4OWQiLCJ1c2VyUG9ydGFsQ2F0ZWdvcnlJZCI6IjBlMTFkZGNiLTA2NWUtNDY5Yi1iMzI0LTcwNWI2ZDhiMGJmZiIsImlhdCI6MTc2ODgwMDczNywiZXhwIjoxNzcwMDk2NzM3fQ.7MUXcXIREqzTcSsCrcVYhlgWs3xF3K5Ni9ukYtwxRZo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"roleName\": \"agent\",\r\n    \"modules\": [\r\n        {\r\n            \"moduleId\": \"006671b3-cca8-4cfb-a280-6a0fefedb907\",\r\n            \"moduleName\": \"marketing-link\",\r\n            \"modulePermission\": [\r\n                \"GET\",\r\n                \"POST\",\r\n                \"DELETE\"\r\n            ],\r\n            \"categoryId\": \"a2af8a13-2a06-4a32-87c9-a4308f0e7b6b\"\r\n        },\r\n        {\r\n            \"moduleId\": \"14b9629d-4c3c-45e3-838b-787bb336c8aa\",\r\n            \"moduleName\": \"sub-agent-management\",\r\n            \"modulePermission\": [\r\n                \"GET\",\r\n                \"POST\",\r\n                \"DELETE\"\r\n            ],\r\n            \"categoryId\": \"a2af8a13-2a06-4a32-87c9-a4308f0e7b6b\"\r\n        },\r\n        {\r\n            \"moduleId\": \"16804e03-7b55-4f9e-89ca-f9258ef31164\",\r\n            \"moduleName\": \"application-management\",\r\n            \"modulePermission\": [\r\n                \"GET\",\r\n                \"POST\",\r\n                \"DELETE\"\r\n            ],\r\n            \"categoryId\": \"a2af8a13-2a06-4a32-87c9-a4308f0e7b6b\"\r\n        },\r\n        {\r\n            \"moduleId\": \"8069254e-0506-40d6-ab06-f3b621b5e99d\",\r\n            \"moduleName\": \"agent-awarding-bodies\",\r\n            \"modulePermission\": [\r\n                \"GET\",\r\n                \"POST\",\r\n                \"DELETE\"\r\n            ],\r\n            \"categoryId\": \"a2af8a13-2a06-4a32-87c9-a4308f0e7b6b\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/roles/2fd19e71-e5d0-449a-b0ac-0e51dc00b3fc",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"roles",
+						"2fd19e71-e5d0-449a-b0ac-0e51dc00b3fc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Assign Role",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": \"b891d563-02c3-4377-8ef8-8e5ae63f3d6e\",\r\n    \"admin\": {\r\n        \"roleId\": \"46064d70-4a0d-4e21-b13d-062bbedb65c6\",\r\n        \"roleName\": \"admission-officer\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/user-management/user/assign/role",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"user-management",
+						"user",
+						"assign",
+						"role"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
