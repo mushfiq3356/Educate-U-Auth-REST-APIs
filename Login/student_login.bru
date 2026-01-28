@@ -5,7 +5,7 @@ meta {
 }
 
 post {
-  url: {{baseUrl}}/auth/student-login/
+  url: {{BASE_URL}}/auth/student-login/
   body: json
   auth: bearer
 }
@@ -16,11 +16,12 @@ auth:bearer {
 
 body:json {
   {
-      "username": "cevetohyc@mailinator.com",
+      "username": "salimkc7@gmail.com",
       "password": "123456"
   }
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }
