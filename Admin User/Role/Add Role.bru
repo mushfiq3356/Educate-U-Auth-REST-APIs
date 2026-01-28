@@ -5,14 +5,14 @@ meta {
 }
 
 post {
-  url: {{baseUrl}}/roles/
+  url: {{BASE_URL}}/roles/
   body: json
   auth: inherit
 }
 
 body:json {
   {
-      "name": "Admin",
+      "name": "sub-agent",
       "application": [
           "GET",
           "POST",
